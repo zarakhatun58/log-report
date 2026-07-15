@@ -1,0 +1,113 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 6 items
+
+../tests/test_outputs.py FFFFFF                                          [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_report_exists ______________________________
+
+    def test_report_exists():
+        """Verify that the report file exists at /app/report.json."""
+>       assert Path("/app/report.json").exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+E        +      where PosixPath('/app/report.json') = Path('/app/report.json')
+
+/tests/test_outputs.py:13: AssertionError
+__________________________ test_report_is_valid_json ___________________________
+
+    def test_report_is_valid_json():
+        """Verify that report.json contains valid JSON."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+        """Load the generated report."""
+>       with open("/app/report.json", "r") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:7: FileNotFoundError
+______________________________ test_report_schema ______________________________
+
+    def test_report_schema():
+        """Verify the report has exactly the required fields."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+        """Load the generated report."""
+>       with open("/app/report.json", "r") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:7: FileNotFoundError
+_____________________________ test_total_requests ______________________________
+
+    def test_total_requests():
+        """Verify the total number of requests."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+        """Load the generated report."""
+>       with open("/app/report.json", "r") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:7: FileNotFoundError
+_______________________________ test_unique_ips ________________________________
+
+    def test_unique_ips():
+        """Verify the number of unique client IP addresses."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+        """Load the generated report."""
+>       with open("/app/report.json", "r") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:7: FileNotFoundError
+________________________________ test_top_path _________________________________
+
+    def test_top_path():
+        """Verify the most frequently requested URL path."""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+        """Load the generated report."""
+>       with open("/app/report.json", "r") as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/app/report.json'
+
+/tests/test_outputs.py:7: FileNotFoundError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_report_exists - AssertionError: assert ...
+FAILED ../tests/test_outputs.py::test_report_is_valid_json - FileNotFoundErro...
+FAILED ../tests/test_outputs.py::test_report_schema - FileNotFoundError: [Err...
+FAILED ../tests/test_outputs.py::test_total_requests - FileNotFoundError: [Er...
+FAILED ../tests/test_outputs.py::test_unique_ips - FileNotFoundError: [Errno ...
+FAILED ../tests/test_outputs.py::test_top_path - FileNotFoundError: [Errno 2]...
+============================== 6 failed in 0.33s ===============================

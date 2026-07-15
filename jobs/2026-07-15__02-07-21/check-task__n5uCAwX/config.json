@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "C:\\Users\\zarak\\AppData\\Local\\Temp\\harbor-check-_sfa4c1f\\check-task"
+    },
+    "trial_name": "check-task__n5uCAwX",
+    "trials_dir": "jobs\\2026-07-15__02-07-21",
+    "agent": {
+        "name": "claude-code",
+        "model_name": "claude-sonnet-4-6"
+    },
+    "job_id": "073af044-ec65-412b-b35f-3a6c617ef567"
+}

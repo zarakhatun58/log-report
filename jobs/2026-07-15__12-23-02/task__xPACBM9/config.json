@@ -1,0 +1,9 @@
+{
+    "task": {
+        "path": "task",
+        "source": "log-report"
+    },
+    "trial_name": "task__xPACBM9",
+    "trials_dir": "jobs\\2026-07-15__12-23-02",
+    "job_id": "890324cc-140c-4c2b-a266-a28ee4d9cb30"
+}

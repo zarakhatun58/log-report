@@ -1,0 +1,99 @@
+Building Docker image harbor-prebuilt:harbor-docker-egress-control-sidecar--38d5fad35d5daec4 from C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\harbor-docker-egress-control-sidecar using C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\harbor-docker-egress-control-sidecar\Dockerfile at 2026-07-14 20:48:28.463421+00:00
+Trial task__qn3k7dc failed: Docker compose command failed for environment log-report. Command: docker compose --project-name task__qn3k7dc__env --project-directory D:\Office\log-report\task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp1jg1yl7q\task__qn3k7dc__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpbjk3g8ou\docker-compose-mounts.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\zarak\AppData\Local\Temp\tmppwutbkaq\docker-compose-egress-control-services.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 391B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 260B 0.0s done
+#2 WARN: InvalidDefaultArgInFrom: Default value for ARG python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9 results in empty or invalid base image name (line 1)
+#2 DONE 0.1s
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9
+
+   2 |     
+
+   3 |     RUN pip install --no-cache-dir \
+
+--------------------
+
+failed to solve: failed to parse stage name "python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9": invalid checksum digest length
+
+
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/gcpab9u58h15m1568x84va7ak
+
+. Stderr: None. 
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 350, in run
+    await self._prepare()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 379, in _prepare
+    await self._setup_agent_environment()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 1097, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 1103, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "C:\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 865, in start
+    await self._run_docker_compose_command(["build"])
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name task__qn3k7dc__env --project-directory D:\Office\log-report\task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp1jg1yl7q\task__qn3k7dc__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpbjk3g8ou\docker-compose-mounts.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\zarak\AppData\Local\Temp\tmppwutbkaq\docker-compose-egress-control-services.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 391B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 260B 0.0s done
+#2 WARN: InvalidDefaultArgInFrom: Default value for ARG python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9 results in empty or invalid base image name (line 1)
+#2 DONE 0.1s
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9
+
+   2 |     
+
+   3 |     RUN pip install --no-cache-dir \
+
+--------------------
+
+failed to solve: failed to parse stage name "python:3.11-slim@sha256:8c6f6e5c6d7d7c9c6c0c7c7b9b6e7c1f6d3f8b7e8a9c0d1e2f3a4b5c6d7e8f9": invalid checksum digest length
+
+
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/gcpab9u58h15m1568x84va7ak
+
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1025, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1010, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+    ...<2 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name task__qn3k7dc__env --project-directory D:\Office\log-report\task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp1jg1yl7q\task__qn3k7dc__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpbjk3g8ou\docker-compose-mounts.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\zarak\AppData\Local\Temp\tmppwutbkaq\docker-compose-egress-control-services.json cp main:/app/report.json jobs\2026-07-15__02-18-20\task__qn3k7dc\artifacts\app\report.json. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 

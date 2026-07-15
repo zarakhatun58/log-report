@@ -1,0 +1,10 @@
+{
+  "results": [
+    {
+      "checks": {},
+      "cost_usd": null,
+      "task_name": "task",
+      "error": "Check trial failed with RuntimeError: Docker compose command failed for environment check-task. Command: docker compose --project-name check-task__5sp7oft__env --project-directory C:\\Users\\zarak\\AppData\\Local\\Temp\\harbor-check-iwt9hhtx\\check-task\\environment -f C:\\Users\\zarak\\AppData\\Local\\Temp\\tmp01w72ywh\\check-task__5Sp7oft__env-docker-compose-resources.json -f C:\\Users\\zarak\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-prebuilt.yaml -f C:\\Users\\zarak\\AppData\\Local\\Temp\\tmpo6_rarx7\\docker-compose-mounts.json up --detach --wait. Return code: 1. Stdout: unable to get image 'python:3.13-slim': error during connect: Get \"http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/images/python:3.13-slim/json\": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.\n. Stderr: None. \nTrial artifacts: jobs\\2026-07-15__11-53-54\\check-task__5Sp7oft"
+    }
+  ]
+}

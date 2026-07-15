@@ -1,0 +1,52 @@
+Skipping image OS validation for python:3.13-slim: docker inspect returned 1
+Trial check-task__5Sp7oft failed: Docker compose command failed for environment check-task. Command: docker compose --project-name check-task__5sp7oft__env --project-directory C:\Users\zarak\AppData\Local\Temp\harbor-check-iwt9hhtx\check-task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp01w72ywh\check-task__5Sp7oft__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-prebuilt.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpo6_rarx7\docker-compose-mounts.json up --detach --wait. Return code: 1. Stdout: unable to get image 'python:3.13-slim': error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/images/python:3.13-slim/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+. Stderr: None. 
+Collecting main service artifacts
+Failed to download artifact '/app/check-result.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 350, in run
+    await self._prepare()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 379, in _prepare
+    await self._setup_agent_environment()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 1097, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\trial.py", line 1103, in _start_agent_environment
+    await asyncio.wait_for(
+    ...<4 lines>...
+    )
+  File "C:\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 882, in start
+    await self._run_docker_compose_command(["up", "--detach", "--wait"])
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment check-task. Command: docker compose --project-name check-task__5sp7oft__env --project-directory C:\Users\zarak\AppData\Local\Temp\harbor-check-iwt9hhtx\check-task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp01w72ywh\check-task__5Sp7oft__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-prebuilt.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpo6_rarx7\docker-compose-mounts.json up --detach --wait. Return code: 1. Stdout: unable to get image 'python:3.13-slim': error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/images/python:3.13-slim/json": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1025, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1010, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+    ...<2 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment check-task. Command: docker compose --project-name check-task__5sp7oft__env --project-directory C:\Users\zarak\AppData\Local\Temp\harbor-check-iwt9hhtx\check-task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp01w72ywh\check-task__5Sp7oft__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-prebuilt.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpo6_rarx7\docker-compose-mounts.json cp main:/app/check-result.json jobs\2026-07-15__11-53-54\check-task__5Sp7oft\artifacts\check-result.json. Return code: 1. Stdout: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/containers/json?all=1&filters=%7B%22label%22%3A%7B%22com.docker.compose.config-hash%22%3Atrue%2C%22com.docker.compose.oneoff%3DFalse%22%3Atrue%2C%22com.docker.compose.project%3Dcheck-task__5sp7oft__env%22%3Atrue%2C%22com.docker.compose.service%3Dmain%22%3Atrue%7D%7D": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+. Stderr: None. 
+Docker compose down failed: Docker compose command failed for environment check-task. Command: docker compose --project-name check-task__5sp7oft__env --project-directory C:\Users\zarak\AppData\Local\Temp\harbor-check-iwt9hhtx\check-task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp01w72ywh\check-task__5Sp7oft__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-prebuilt.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpo6_rarx7\docker-compose-mounts.json down --rmi local --volumes --remove-orphans. Return code: 1. Stdout: error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/containers/json?all=1&filters=%7B%22label%22%3A%7B%22com.docker.compose.config-hash%22%3Atrue%2C%22com.docker.compose.project%3Dcheck-task__5sp7oft__env%22%3Atrue%7D%7D": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached

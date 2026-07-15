@@ -1,0 +1,23 @@
+Skipping image OS validation for hb__6fda7e7159523c97a1a9c772988580b2: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+    ...<3 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1025, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1010, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+    ...<2 lines>...
+    )
+  File "C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+    ...<5 lines>...
+    )
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name task__pfged4g__env --project-directory D:\Office\log-report\task\environment -f C:\Users\zarak\AppData\Local\Temp\tmp214v7ai0\task__PfgEd4g__env-docker-compose-resources.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\zarak\AppData\Local\Temp\tmp2dxlmpva\docker-compose-mounts.json -f C:\Users\zarak\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\zarak\AppData\Local\Temp\tmpugvc5e7z\docker-compose-egress-control-services.json cp main:/app/report.json jobs\2026-07-15__12-23-58\task__PfgEd4g\artifacts\app\report.json. Return code: 1. Stdout:  task__pfged4g__env-main-1 copy task__pfged4g__env-main-1:/app/report.json to jobs\2026-07-15__12-23-58\task__PfgEd4g\artifacts\app\report.json Copying
+Error response from daemon: Could not find the file /app/report.json in container 6a0c063e5d581a860acaf9e7e1729ea40f84684e811e982d00c69009ea217f95
+. Stderr: None. 
